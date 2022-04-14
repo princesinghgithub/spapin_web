@@ -13,36 +13,17 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="images/favicon.png" />
     <style>
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-            width: 80%;
-            height: 80%;
-            text-align: center;
-        }
-
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        }
-
         .text-shadow {
-            color: rgb(31, 31, 190);
+            color: blue;
             text-shadow: 2px 2px 4px #000000;
         }
 
-        .button_Login {
-            border: none;
-            color: white;
-            padding: 10px 32px;
-            text-align: center;
-            text-decoration: none;
-            width: fit-content;
+        .puzzle_img {
             position: relative;
-            left: 375px;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            background-color: #4b49ac;
+            right: 10px;
+        }
+        .login_btn{
+            width: 40px;
         }
     </style>
 </head>
@@ -207,7 +188,7 @@
                                 <li class="nav-item"> <a class="nav-link" href="">Add Office User</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="">Users List</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="">Profile</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="">Manager Users</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="Manage-user.html">Manager Users</a></li>
                             </ul>
                         </div>
                     </li>
@@ -216,24 +197,16 @@
             </nav>
             <!-- partial -->
             <div class="main-panel">
-                <div class="content-wrapper p-0">
-                    <nav aria-label="breadcrumb" class="bg-primary">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item active" aria-current="page">Home</li>
-                        </ol>
-                    </nav>
+                <div class="container border">
                     <div class="row">
-                        <div class="col-md-12 pl-5">
-
-                            <div class="card  justify-content-center ">
-                                <img src="images/puzzle.jpg" alt="Avatar" style="width:80%" height="60%">
-                                <div class="container">
-                                    <h2 class="text-shadow"><b>Your Session Has Expired ..!!</b></h2>
-                                    <p><i>Click here to Login again</i></p>
-                                </div>
-                                <a class=" button_Login" href="#" role="button">Login</a>
+                        <div class="col-md-12">
+                            <div class=" text-center puzzle_img"><img src="images/puzzle.jpg" alt="" width="50%"></div>
+                            <div class="puzzle_img text-center">
+                                <h2 class="text-shadow">Your Session Has expired ....!</h2>
+                                <p class="text-center pt-2"><i class="text-muted">Click here to login again</i></p>
+                                <a class="btn btn-primary login_btn" href="#" role="button" style="width: 91px;">Login</a>
                             </div>
-
+                            
                         </div>
                     </div>
                 </div>
