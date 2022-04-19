@@ -1,0 +1,13 @@
+.card-image1{
+    width: 150px;
+    height:150px;
+    border: 12px;
+    border-radius: 12px;
+    position: relative;
+   left: 76px;
+}
+.boton{
+    margin-left: 283px;
+    margin-top: 2px;
+    float: right;
+}
