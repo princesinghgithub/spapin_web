@@ -2,330 +2,887 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>CFS Job List</title>
-  <link rel="stylesheet" href="css/bootstrap-4.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
-  <link rel="stylesheet" type="text/css" href="css/select.dataTables.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="images/favicon.png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CFS Job List</title>
+    <link rel="stylesheet" href="css/bootstrap-4.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="css/select.dataTables.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-  <div class="container-scroller">
-    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo"/></a>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+    <div class="container-scroller">
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
           <span class="icon-menu"></span>
         </button>
-        <ul class="navbar-nav mr-lg-2">
-          <li class="nav-item nav-search d-none d-lg-block">
-            <div class="input-group">
-              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-                <span class="input-group-text" id="search">
+                <ul class="navbar-nav mr-lg-2">
+                    <li class="nav-item nav-search d-none d-lg-block">
+                        <div class="input-group">
+                            <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                                <span class="input-group-text" id="search">
                   <i class="icon-search"></i>
                 </span>
-              </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-              <i class="icon-bell mx-0"></i>
-              <span class="count"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-success">
-                    <i class="ti-info-alt mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
-                  <p class="font-weight-light small-text mb-0 text-muted">
-                    Just now
-                  </p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-warning">
-                    <i class="ti-settings mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Settings</h6>
-                  <p class="font-weight-light small-text mb-0 text-muted">
-                    Private message
-                  </p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-info">
-                    <i class="ti-user mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
-                  <p class="font-weight-light small-text mb-0 text-muted">
-                    2 days ago
-                  </p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="images/faces/face1.jpg" alt="profile"/>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="ti-settings text-primary"></i>
-                Settings
-              </a>
-              <a class="dropdown-item">
-                <i class="ti-power-off text-primary"></i>
-                Logout
-              </a>
-            </div>
-          </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                            </div>
+                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                            <i class="icon-bell mx-0"></i>
+                            <span class="count"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-success">
+                                        <i class="ti-info-alt mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        Just now
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-warning">
+                                        <i class="ti-settings mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal">Settings</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        Private message
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-info">
+                                        <i class="ti-user mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        2 days ago
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                            <img src="images/faces/face1.jpg" alt="profile" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item">
+                                <i class="ti-settings text-primary"></i> Settings
+                            </a>
+                            <a class="dropdown-item">
+                                <i class="ti-power-off text-primary"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="icon-menu"></span>
         </button>
-      </div>
-    </nav>
-    <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#sea" aria-expanded="false" aria-controls="sea">
-              <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Sea Import</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="sea">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="">CFS Job List</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Seal Cutting</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">New Job</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Container List</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Unknown Job</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Invoice List</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Payment List</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Gate Pass List</a></li>
-              </ul>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#masters" aria-expanded="false" aria-controls="masters">
-              <i class="icon-paper menu-icon"></i>
-              <span class="menu-title">Masters</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="masters">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#admin" aria-expanded="false" aria-controls="admin">
-              <i class="icon-head menu-icon"></i>
-              <span class="menu-title">Admin</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="admin">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="">Add Mobile User</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Add Office User</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Users List</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Profile</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Manager Users</a></li>
-              </ul>
-            </div>
-          </li>
-          
-        </ul>
-      </nav>
-      <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
-          <div class="row mb-4">
-            <div class="col-md-12">
-              <div class="card p-3">
-                <nav>
-                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-                  </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><div class="col-md-12 grid-margin stretch-card p-0">
-              <div class="card p-0">
-                <div class="card-body p-0">
-                  <p class="card-title">Table 1</p>
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="table-responsive">
-                        <table id="example" class="display expandable-table" style="width:100%">
-                          <thead>
-                            <tr>
-                              <th>Quote#</th>
-                              <th>Product</th>
-                              <th>Business type</th>
-                              <th>Policy holder</th>
-                              <th>Premium</th>
-                              <th>Status</th>
-                              <th>Updated at</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                      </table>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-              </div></div>
-                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"><div class="col-md-12 grid-margin stretch-card p-0">
-                    <div class="card p-0">
-                      <div class="card-body p-0">
-                        <p class="card-title">Table 2</p>
-                        <div class="row">
-                          <div class="col-12">
-                            <div class="table-responsive">
-                              <table id="example" class="display expandable-table" style="width:100%">
-                                <thead>
-                                  <tr>
-                                    <th>Quote#</th>
-                                    <th>Product</th>
-                                    <th>Business type</th>
-                                    <th>Policy holder</th>
-                                    <th>Premium</th>
-                                    <th>Status</th>
-                                    <th>Updated at</th>
-                                    <th></th>
-                                  </tr>
-                                </thead>
-                            </table>
-                            </div>
-                          </div>
-                        </div>
-                        </div>
-                      </div>
-                    </div></div>
-                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><div class="col-md-12 grid-margin stretch-card p-0">
-                    <div class="card p-0">
-                      <div class="card-body p-0">
-                        <p class="card-title">Table 3</p>
-                        <div class="row">
-                          <div class="col-12">
-                            <div class="table-responsive">
-                              <table id="example" class="display expandable-table" style="width:100%">
-                                <thead>
-                                  <tr>
-                                    <th>Quote#</th>
-                                    <th>Product</th>
-                                    <th>Business type</th>
-                                    <th>Policy holder</th>
-                                    <th>Premium</th>
-                                    <th>Status</th>
-                                    <th>Updated at</th>
-                                    <th></th>
-                                  </tr>
-                                </thead>
-                            </table>
-                            </div>
-                          </div>
-                        </div>
-                        </div>
-                      </div>
-                    </div></div>
-                </div>
-            </div>
-          </div>
-        </div>
-          <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Advanced Table</p>
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="table-responsive">
-                        <table id="example" class="display expandable-table" style="width:100%">
-                          <thead>
-                            <tr>
-                              <th>Quote#</th>
-                              <th>Product</th>
-                              <th>Business type</th>
-                              <th>Policy holder</th>
-                              <th>Premium</th>
-                              <th>Status</th>
-                              <th>Updated at</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                      </table>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. All rights reserved.</span>
-            </div>
-        </footer>
+        </nav>
         <!-- partial -->
-      </div>
-      <!-- main-panel ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-  </div>
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="icon-grid menu-icon"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#sea" aria-expanded="false" aria-controls="sea">
+                            <i class="icon-layout menu-icon"></i>
+                            <span class="menu-title">Sea Import</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="sea">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="">CFS Job List</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Seal Cutting</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">New Job</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Container List</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Unknown Job</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Invoice List</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Payment List</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Gate Pass List</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#masters" aria-expanded="false" aria-controls="masters">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">Masters</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="masters">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#admin" aria-expanded="false" aria-controls="admin">
+                            <i class="icon-head menu-icon"></i>
+                            <span class="menu-title">Admin</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="admin">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="">Add Mobile User</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Add Office User</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Users List</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Profile</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Manager Users</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-  <!-- plugins:js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  <script src="js/vendor.bundle.base.js"></script>
-  <script src="js/Chart.min.js"></script>
-  <script src="js/jquery.dataTables.js"></script>
-  <script src="js/dataTables.bootstrap4.js"></script>
-  <script src="js/dataTables.select.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/off-canvas.js"></script>
-  <script src="js/hoverable-collapse.js"></script>
-  <script src="js/template.js"></script>
-  <script src="js/dashboard.js"></script>
-  <script src="js/Chart.roundedBarCharts.js"></script>
+                </ul>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <div class="container mb-3">
+                                <h3>Job details</h3>
+                            </div>
+                            <button type="button" class="btn btn-info mb-2">Back</button>
+                            <div class="card p-3">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link active" id="nav-igm-tab" data-bs-toggle="tab" data-bs-target="#nav-igm" type="button" role="tab" aria-controls="nav-igm" aria-selected="true">IGM</button>
+                                        <button class="nav-link" id="nav-sheepment-tab" data-bs-toggle="tab" data-bs-target="#nav-sheepment" type="button" role="tab" aria-controls="nav-sheepment" aria-selected="false">Sheepment</button>
+                                        <button class="nav-link" id="nav-hss-tab" data-bs-toggle="tab" data-bs-target="#nav-hss" type="button" role="tab" aria-controls="nav-hss" aria-selected="false">HSS Details</button>
+                                        <button class="nav-link" id="nav-sealcutting-tab" data-bs-toggle="tab" data-bs-target="#nav-sealcutting" type="button" role="tab" aria-controls="nav-sealcutting" aria-selected="false">Seal Cutting</button>
+                                        <button class="nav-link" id="nav-invoicess-tab" data-bs-toggle="tab" data-bs-target="#nav-invoicess" type="button" role="tab" aria-controls="nav-invoicess" aria-selected="false">Invoice</button>
+                                        <button class="nav-link" id="nav-get_pass-tab" data-bs-toggle="tab" data-bs-target="#nav-get_pass" type="button" role="tab" aria-controls="nav-get_pass" aria-selected="false">Get Pass</button>
+                                        <button class="nav-link" id="nav-container-tab" data-bs-toggle="tab" data-bs-target="#nav-container" type="button" role="tab" aria-controls="nav-container" aria-selected="false">Container</button>
+                                        <button class="nav-link" id="nav-docs-tab" data-bs-toggle="tab" data-bs-target="#nav-docs" type="button" role="tab" aria-controls="nav-docs" aria-selected="false">Docs</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <!--IGM nav start-->
+                                    <div class="tab-pane fade show active" id="nav-igm" role="tabpanel" aria-labelledby="nav-igm-tab">
+                                        <div class="col-md-12 grid-margin stretch-card p-0">
+                                            <div class="card p-0">
+                                                <div class="card-body p-0">
+                                                    <!-- <p class="card-title">Job Details</p> -->
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <table id="tabel_1" class="table display expandable-table table-hover" style="width:100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>IGM No.</th>
+                                                                            <th>IGM Date</th>
+                                                                            <th>Inward Date</th>
+                                                                            <th>Line No.</th>
+                                                                            <th>Sub line no.</th>
+                                                                            <th>Scan Status</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>2290677</td>
+                                                                            <td>28-08-2021</td>
+                                                                            <td>31-08-2021</td>
+                                                                            <td>101</td>
+                                                                            <td>0</td>
+                                                                            <td>Active</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>4420678</td>
+                                                                            <td>30-08-2021</td>
+                                                                            <td>01-09-2021</td>
+                                                                            <td>102</td>
+                                                                            <td>0</td>
+                                                                            <td>Active</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>4420679</td>
+                                                                            <td>02-09-2021</td>
+                                                                            <td>01-09-2021</td>
+                                                                            <td>102</td>
+                                                                            <td>0</td>
+                                                                            <td>Active</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>4420678</td>
+                                                                            <td>30-08-2021</td>
+                                                                            <td>01-09-2021</td>
+                                                                            <td>102</td>
+                                                                            <td>0</td>
+                                                                            <td>Active</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                        <div class="col-md-12 p-0">
+                                            <div class="table-responsive">
+                                                <table id="" class=" table table-hover display expandable-table" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Vessel Name</th>
+                                                            <th scope="col">Voyege No.</th>
+                                                            <th scope="col">Shiping line/NVOCC Name</th>
+                                                            <th scope="col">Agent/Forwarder Name</th>
+                                                            <th scope="col">Damage Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Hundai Prestige</td>
+                                                            <td>501</td>
+                                                            <td>Hundai merchant marine india P LTD</td>
+                                                            <td>sunny kosle</td>
+                                                            <td>Not available</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>maruti suzuki</td>
+                                                            <td>402</td>
+                                                            <td>maruti merchant marine india P LTD</td>
+                                                            <td>Aman kosle</td>
+                                                            <td>Not available</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                        <hr>
+                                        <!---->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="CB">CB Remark :</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="dummy data comming data will be replaced" disabled>
+                                            </div>
+                                            <div class="col-md-6 btn1">
+                                                <button class="btn btn-primary" type="submit">Issue SC</button>
+                                                <button class="btn btn-info" type="submit">Reject SC</button>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <!--IGM nav end-->
+                                    <!--Shipment nav Star-->
+                                    <div class="tab-pane fade" id="nav-sheepment" role="tabpanel" aria-labelledby="nav-sheepment-tab">
+                                        <div class="col-md-12 grid-margin stretch-card p-0">
+                                            <div class="card p-0">
+                                                <div class="card-body p-0">
+                                                    <!-- <p class="card-title">Sheepment Table</p> -->
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="table-responsive">
+                                                                <!--first table sheepment 1 -->
+                                                                <table id="" class="table table-hover  display expandable-table mb-3" style="width:100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Custom House code</th>
+                                                                            <th>MBL No.</th>
+                                                                            <th>MBL Date</th>
+                                                                            <th>HBL Date</th>
+                                                                            <th>BE No.</th>
+                                                                            <th>BE Date</th>
+                                                                            <th>Arrival Date</th>
+                                                                            <th></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>INSSA1</td>
+                                                                            <td>CULTAO21019242</td>
+                                                                            <td>21-04-2022</td>
+                                                                            <td>NA</td>
+                                                                            <td>NA</td>
+                                                                            <td>21-04-2022</td>
+                                                                            <td>28-08-2021</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>INSSA1</td>
+                                                                            <td>CULTAO21019242</td>
+                                                                            <td>21-04-2022</td>
+                                                                            <td>NA</td>
+                                                                            <td>NA</td>
+                                                                            <td>21-04-2022</td>
+                                                                            <td>28-08-2021</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <!--first table sheepment 1 end -->
+                                                            </div>
+                                                        </div>
+                                                        <!-- second table sheepment -->
+                                                        <div class="col-md-12">
+                                                            <div class="table-responsive">
+                                                                <table id="" class=" table table-hover display expandable-table mb-3" style="width:100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col">Pol</th>
+                                                                            <th scope="col">Pod</th>
+                                                                            <th scope="col">Pkgs</th>
+                                                                            <th scope="col">Pkgs. Code</th>
+                                                                            <th scope="col">Gross Weight</th>
+                                                                            <th scope="col">UQM Of Wt</th>
+                                                                            <th scope="col">Exam %</th>
+                                                                            <th scope="col">Scan Status</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Qingdao</td>
+                                                                            <td>JNPT(Nhava Seva)</td>
+                                                                            <td>1002</td>
+                                                                            <td>bags</td>
+                                                                            <td>21871.000</td>
+                                                                            <td>Kilogram</td>
+                                                                            <td>RMS</td>
+                                                                            <td>Suspected</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Qingdao</td>
+                                                                            <td>JNPT(Nhava Seva)</td>
+                                                                            <td>1002</td>
+                                                                            <td>bags</td>
+                                                                            <td>21871.000</td>
+                                                                            <td>Kilogram</td>
+                                                                            <td>RMS</td>
+                                                                            <td>Suspected</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <!-- second table sheepment -->
+                                                        <!-- third table -->
+                                                        <div class="col-md-12">
+                                                            <div class="table-responsive">
+                                                                <table id="" class=" table table-hover display expandable-table mb-3" style="width:100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col">Assessable value</th>
+                                                                            <th scope="col">Custom Duty</th>
+                                                                            <th scope="col">Inv.currency</th>
+                                                                            <th scope="col">Inv.Value</th>
+                                                                            <th scope="col">Nominated CFS</th>
+                                                                            <th scope="col">Import Type</th>
+                                                                            <th scope="col">Carrier Delivery Type</th>
+                                                                            <th scope="col">CFS Delivery Type</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>929773</td>
+                                                                            <td>235946</td>
+                                                                            <td>USD</td>
+                                                                            <td>12364.00</td>
+                                                                            <td>Yes</td>
+                                                                            <td>CFS_CFS</td>
+                                                                            <td>Loaded</td>
+                                                                            <td>Loaded</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>929773</td>
+                                                                            <td>235946</td>
+                                                                            <td>USD</td>
+                                                                            <td>12364.00</td>
+                                                                            <td>Yes</td>
+                                                                            <td>CFS_CFS</td>
+                                                                            <td>Loaded</td>
+                                                                            <td>Loaded</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <!-- third table end -->
+                                                        <!-- fourth table  -->
+                                                        <div class="col-md-12">
+                                                            <div class="table-responsive">
+                                                                <table id="" class=" table table-hover display expandable-table mb-3" style="width:100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col">CB Name</th>
+                                                                            <th scope="col">CB Old Lic No.</th>
+                                                                            <th scope="col">CB Licience No.</th>
+                                                                            <th scope="col">High Seas Sale</th>
+                                                                            <th scope="col">First Check</th>
+                                                                            <th scope="col">Shipment Type</th>
+                                                                            <th scope="col">Equipment/Labour</th>
+                                                                            <th scope="col">Delivery Date</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>NHD Forworders PVT LTD</td>
+                                                                            <td>11-0212</td>
+                                                                            <td>AAECN0718RCH001</td>
+                                                                            <td>N</td>
+                                                                            <td>N</td>
+                                                                            <td>FCL</td>
+                                                                            <td>Labour</td>
+                                                                            <td>28-08-2021</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>NHD Forworders PVT LTD</td>
+                                                                            <td>11-0212</td>
+                                                                            <td>AAECN0718RCH001</td>
+                                                                            <td>N</td>
+                                                                            <td>N</td>
+                                                                            <td>FCL</td>
+                                                                            <td>Labour</td>
+                                                                            <td>28-08-2021</td>
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <!-- fourth table end -->
+                                                        <!-- fifth tabel -->
+                                                        <div class="col-md-12">
+                                                            <div class="table-responsive">
+                                                                <table id="" class=" table table-hover display expandable-table mt-3" style="width:100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col">Importar</th>
+                                                                            <th scope="col">Importar Address</th>
+                                                                            <th scope="col">Bill To</th>
+                                                                            <th scope="col">Bill To Address</th>
+                                                                            <th scope="col">Pan No.</th>
+                                                                            <th scope="col">GSTIN No.</th>
+                                                                            <th scope="col">Damage Status</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>BIOPA PRO PVT LIMITED</td>
+                                                                            <td>
+                                                                                <p> G1 Grd floor Rajendra vihar khetwadi 12TH Line GIRGAON Mumbai 400004</p>
+                                                                            </td>
+                                                                            <td>Data not available</td>
+                                                                            <td>Data not available</td>
+                                                                            <td>Data not available</td>
+                                                                            <td>Data not available</td>
+                                                                            <td>Data not available</td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>BIOPA PRO PVT LIMITED</td>
+                                                                            <td>
+                                                                                G1 Grd floor Rajendra vihar khetwadi 12TH Line GIRGAON Mumbai 400004
+                                                                            </td>
+                                                                            <td>Data not available</td>
+                                                                            <td>Data not available</td>
+                                                                            <td>Data not available</td>
+                                                                            <td>Data not available</td>
+                                                                            <td>Data not available</td>
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <!-- header buttons fifth table -->
+                                                        <div class="col-md-6 mt-4">
+                                                            <label for="CB">CB Remark :</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="dummy data comming data will be replaced" disabled>
+                                                        </div>
+                                                        <div class="col-md-6" style="margin-top: 54px;">
+                                                            <button class="btn btn-primary" type="submit">Issue SC</button>
+                                                            <button class="btn btn-info" type="submit">Reject SC</button>
+                                                        </div>
+                                                        <!-- header buttons fifth table -->
+                                                        <!-- fifth table end -->
+                                                        <hr>
+                                                        <!--extra code for button-->
+
+                                                        <!-- <div class="col-md-6">
+                                                            <label for="CB">CB Remark :</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="dummy data comming data will be replaced" disabled>
+                                                        </div>
+                                                        <div class="col-md-6 btn1">
+                                                            <button class="btn btn-success" type="submit">Issue SC</button>
+                                                            <button class="btn btn-danger" type="submit">Reject SC</button>
+                                                        </div> -->
+
+                                                        <!--extra code for button end-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Shipment nav end-->
+                                    <!--HSS nav Start-->
+                                    <div class="tab-pane fade" id="nav-hss" role="tabpanel" aria-labelledby="nav-hss-tab">
+                                        <div class="col-md-12 grid-margin stretch-card p-0">
+                                            <div class="card p-0">
+                                                <div class="card-body p-0">
+                                                    <!-- <p class="card-title">Hss Data</p> -->
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <!-- <div class="table-responsive">
+                                                                <table id="example" class="display expandable-table" style="width:100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Quote#</th>
+                                                                            <th>Product</th>
+                                                                            <th>Business type</th>
+                                                                            <th>Policy holder</th>
+                                                                            <th>Premium</th>
+                                                                            <th>Status</th>
+                                                                            <th>Updated at</th>
+                                                                            <th></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                </table>
+                                                            </div> -->
+                                                            <label for="exampleInputEmail1">High Seal Sale</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="N" disabled>
+
+                                                            <!-- <div class="mt-2">
+                                                                <label for="exampleInputEmail1">CB Remark :</label>
+                                                                <input type="text" class="form-control hssIn" id="exampleInputEmail1" aria-describedby="emailHelp" value="Dummy data" disabled>
+                                                            </div>
+                                                            <div class="mt-4 text-center">
+                                                                <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                                                                <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                                                            </div> -->
+                                                        </div>
+
+                                                        <div class="col-md-4">
+                                                            <label for="">CB Remark :</label>
+                                                            <input type="text" class="form-control" id="" aria-describedby="emailHelp" value="Dummy data content will be replaced" disabled>
+                                                        </div>
+                                                        <div class="col-md-4 hssb">
+                                                            <button type="button" class="btn btn-primary mr-2">Issue</button>
+                                                            <button type="button" class="btn btn-info">Reject</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--HSS nav end-->
+                                    <!--seal cutting nav Start-->
+                                    <div class="tab-pane fade" id="nav-sealcutting" role="tabpanel" aria-labelledby="nav-sealcutting-tab">
+                                        <div class="col-md-12 grid-margin stretch-card p-0">
+                                            <div class="card p-0">
+                                                <div class="card-body p-0">
+                                                    <!-- <p class="card-title">seal cutting</p> -->
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <label for="exampleInputEmail1">Seal Cutting No.</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="" disabled>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <label for="exampleInputEmail1">Seal Cutting Date</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="" disabled>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <label for="exampleInputEmail1">Surveyor Name</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="" disabled>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <label for="exampleInputEmail1">Partial Delivery</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="" disabled>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <label for="exampleInputEmail1">Remarks</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="" disabled>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6 mt-2">
+                                                            <label for="exampleInputEmail1"> CB Remarks :</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value=" dummy data content will be replaced" disabled>
+                                                        </div>
+                                                        <div class="col-md- scb">
+                                                            <button type="button" class="btn btn-primary">Issue</button>
+                                                        </div>
+                                                        <div class="col-md-2 scb">
+                                                            <button type="button" class="btn btn-info">Reject</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--seal cutting nav end-->
+                                    <!-- Invoices nav start -->
+                                    <div class="tab-pane fade" id="nav-invoicess" role="tabpanel" aria-labelledby="nav-invoicess-tab">
+                                        <div class="col-md-12 grid-margin stretch-card p-0">
+                                            <div class="card p-0">
+                                                <div class="card-body p-0">
+                                                    <p class="card-title">No Data to show please issue invoice first !!</p>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label for="exampleInputEmail1">CB Remarks :</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="" disabled>
+                                                        </div>
+                                                        <div class="col-md-3- invoceb">
+                                                            <button type="button" class="btn btn-primary">Issue</button>
+                                                        </div>
+                                                        <div class="col-md-3 invoceb">
+                                                            <button type="button" class="btn btn-info">Reject</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Invoice nav end -->
+
+                                    <!-- get pass nav start -->
+                                    <div class="tab-pane fade" id="nav-get_pass" role="tabpanel" aria-labelledby="nav-get_pass-tab">
+                                        <div class="col-md-12 grid-margin stretch-card p-0">
+                                            <div class="card p-0">
+                                                <div class="card-body p-0">
+                                                    <p class="card-title">No data to show please issue Get pass first !!</p>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label for="exampleInputEmail1">CB Remarks :</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="" disabled>
+                                                        </div>
+                                                        <div class="col-md-3- invoceb">
+                                                            <button type="button" class="btn btn-primary">Issue</button>
+                                                        </div>
+                                                        <div class="col-md-3 invoceb">
+                                                            <button type="button" class="btn btn-info">Reject</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- get pass nav end -->
+                                    <!-- container nav start -->
+                                    <div class="tab-pane fade show active" id="nav-container" role="tabpanel" aria-labelledby="nav-container-tab">
+                                        <div class="col-md-12 grid-margin stretch-card p-0">
+                                            <div class="card p-0">
+                                                <div class="card-body p-0">
+                                                    <!-- <p class="card-title">Job Details</p> -->
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <table id="tabel_1" class="table display expandable-table table-hover" style="width:100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>container No.</th>
+                                                                            <th>Seal No.</th>
+                                                                            <th>Size</th>
+                                                                            <th>Shipment Type</th>
+                                                                            <th>Delivery Type</th>
+                                                                            <th>No.of Pkgs</th>
+                                                                            <th>Gross wt.(KGS)</th>
+                                                                            <th>Vehicle No.</th>
+                                                                            <th>Driver Name</th>
+                                                                            <th>Location</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>HDMU6850997</td>
+                                                                            <td>210743867</td>
+                                                                            <td>40` High Cube</td>
+                                                                            <td>FCL</td>
+                                                                            <td>Loaded</td>
+                                                                            <td>759</td>
+                                                                            <td>27.300</td>
+                                                                            <td>null</td>
+                                                                            <td>null</td>
+                                                                            <td>NA</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>HDMU6850997</td>
+                                                                            <td>210743867</td>
+                                                                            <td>40` High Cube</td>
+                                                                            <td>FCL</td>
+                                                                            <td>Loaded</td>
+                                                                            <td>759</td>
+                                                                            <td>27.300</td>
+                                                                            <td>null</td>
+                                                                            <td>null</td>
+                                                                            <td>NA</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <!---->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="CB">CB Remark :</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="dummy data comming data will be replaced" disabled>
+                                            </div>
+                                            <div class="col-md-6 btn1">
+                                                <button class="btn btn-primary mr-2" type="submit">Issue SC</button>
+                                                <button class="btn btn-info" type="submit">Reject SC</button>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <!-- container nav end -->
+
+                                    <!-- docs nav start -->
+                                    <div class="tab-pane fade show active" id="nav-docs" role="tabpanel" aria-labelledby="nav-docs-tab">
+                                        <div class="col-md-12 grid-margin stretch-card p-0">
+                                            <div class="card p-0">
+                                                <div class="card-body p-0">
+                                                    <!-- <p class="card-title">Job Details</p> -->
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <table id="tabel_1" class="table display expandable-table table-hover" style="width:100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Role</th>
+                                                                            <th>Issued By</th>
+                                                                            <th>Document Name</th>
+                                                                            <th>Document Date</th>
+                                                                            <th>View Document</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Custom doc</td>
+                                                                            <td>Custom doc</td>
+                                                                            <td>Assesed BE</td>
+                                                                            <td>NA</td>
+                                                                            <td><button type="button" class="btn btn-primary">View document</button></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Custom doc</td>
+                                                                            <td>Custom doc</td>
+                                                                            <td>Assesed BE</td>
+                                                                            <td>NA</td>
+                                                                            <td><button type="button" class="btn btn-primary">View document</button></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Custom doc</td>
+                                                                            <td>Custom doc</td>
+                                                                            <td>Assesed BE</td>
+                                                                            <td>NA</td>
+                                                                            <td><button type="button" class="btn btn-primary">View document</button></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Custom doc</td>
+                                                                            <td>Custom doc</td>
+                                                                            <td>Assesed BE</td>
+                                                                            <td>NA</td>
+                                                                            <td><button type="button" class="btn btn-primary">View document</button></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+
+
+                                        <div class="mt-2 mb-2">
+                                            <label for="exampleInputEmail1">Show entries</label>
+                                            <select class="form-control form-control-sm">
+                                                <option>Select rows</option>
+                                                <option>5</option>
+                                                <option>10</option>
+                                                <option>15</option>
+                                                <option>20</option>
+                                              </select>
+                                        </div>
+                                        <!---->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="CB">CB Remark :</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="dummy data comming data will be replaced" disabled>
+                                            </div>
+                                            <div class="col-md-6 btn1">
+                                                <button class="btn btn-primary mr-2" type="submit">Issue SC</button>
+                                                <button class="btn btn-info" type="submit">Reject SC</button>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <!-- docs nav end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. All rights reserved.</span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+
+    <!-- plugins:js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="js/vendor.bundle.base.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap4.js"></script>
+    <script src="js/dataTables.select.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/Chart.roundedBarCharts.js"></script>
 </body>
 
 </html>
-
