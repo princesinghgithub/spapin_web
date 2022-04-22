@@ -94,3 +94,22 @@
 .invoceb {
     margin-top: 32px;
 }
+
+.selectionBox {
+    width: 150px;
+    height: 30px;
+}
+
+#Search {
+    width: 150px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.backButton {
+    margin-left: 90%;
+}
+
+.pagination {
+    margin-left: 60%;
+}

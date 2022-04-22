@@ -177,7 +177,9 @@
                             <div class="container mb-3">
                                 <h3>Job details</h3>
                             </div>
-                            <button type="button" class="btn btn-info mb-2">Back</button>
+                            <div class="backButton">
+                                <button type="button" class="btn btn-info mb-2 " id="">Back</button>
+                            </div>
                             <div class="card p-3">
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -768,7 +770,9 @@
                                     <!-- container nav end -->
 
                                     <!-- docs nav start -->
+
                                     <div class="tab-pane fade show active" id="nav-docs" role="tabpanel" aria-labelledby="nav-docs-tab">
+                                        <input type="text" class="form-control mt-2 mb-2" id="Search" aria-describedby="emailHelp" placeholder="Search">
                                         <div class="col-md-12 grid-margin stretch-card p-0">
                                             <div class="card p-0">
                                                 <div class="card-body p-0">
@@ -825,10 +829,20 @@
                                         </div>
                                         <hr>
 
-
+                                        <div class="pagination">
+                                            <nav aria-label="Page navigation example">
+                                                <ul class="pagination">
+                                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
                                         <div class="mt-2 mb-2">
                                             <label for="exampleInputEmail1">Show entries</label>
-                                            <select class="form-control form-control-sm">
+                                            <select class="form-control form-control-sm selectionBox">
                                                 <option>Select rows</option>
                                                 <option>5</option>
                                                 <option>10</option>
