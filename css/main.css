@@ -60,3 +60,70 @@
 .p_button {
     text-align: center;
 }
+
+.txt-center {
+    text-align: center;
+}
+
+#txt1 {
+    width: 60px;
+    border: 0.1px solid rgb(153, 153, 153);
+    height: 20px;
+}
+
+#h_txt {
+    height: 20px;
+}
+
+.btn1 {
+    margin-top: 30px;
+}
+
+.hssIn {
+    width: 500px;
+}
+
+.hssb {
+    margin-top: 33px;
+}
+
+.scb {
+    margin-top: 38px;
+}
+
+.invoceb {
+    margin-top: 32px;
+}
+
+.selectionBox {
+    width: 150px;
+    height: 30px;
+}
+
+#Search {
+    width: 150px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.backButton {
+    margin-left: 90%;
+}
+
+.pagination {
+    margin-left: 60%;
+}
+
+.seal_cutting_b {
+    margin-left: 85%;
+}
+
+.seal_cutting_list_in {
+    margin-left: 40%;
+    /* margin-top: 1%; */
+    margin-bottom: 5px;
+}
+
+.seal_nav {
+    margin-left: 25%;
+}

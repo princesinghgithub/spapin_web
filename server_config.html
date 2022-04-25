@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Spapin Admin</title>
+    <link rel="stylesheet" href="css/bootstrap-4.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="css/select.dataTables.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container-scroller">
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+                <ul class="navbar-nav mr-lg-2">
+                    <li class="nav-item nav-search d-none d-lg-block">
+                        <div class="input-group">
+                            <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+                            </div>
+                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                            <i class="icon-bell mx-0"></i>
+                            <span class="count"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-success">
+                                        <i class="ti-info-alt mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        Just now
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-warning">
+                                        <i class="ti-settings mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal">Settings</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        Private message
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-info">
+                                        <i class="ti-user mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        2 days ago
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                            <img src="images/faces/face1.jpg" alt="profile" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item">
+                                <i class="ti-settings text-primary"></i> Settings
+                            </a>
+                            <a class="dropdown-item">
+                                <i class="ti-power-off text-primary"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="icon-grid menu-icon"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#sea" aria-expanded="false" aria-controls="sea">
+                            <i class="icon-layout menu-icon"></i>
+                            <span class="menu-title">Sea Import</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="sea">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="cfs-job-list.html">CFS Job List</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Seal Cutting</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">New Job</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Container List</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Unknown Job</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Invoice List</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Payment List</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Gate Pass List</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#masters" aria-expanded="false" aria-controls="masters">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">Masters</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="masters">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Dummy</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#admin" aria-expanded="false" aria-controls="admin">
+                            <i class="icon-head menu-icon"></i>
+                            <span class="menu-title">Admin</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="admin">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="">Add Mobile User</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Add Office User</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Users List</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Profile</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="">Manager Users</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-md-12 grid-margin stretch-card">
+                            <div class="card position-relative">
+                                <div class="card-body">
+                                    <form action="">
+                                        <div class="container row">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustom01">ICE GATE ID</label>
+                                                <input type="text" class="form-control" id="" placeholder="ICE GATE ID" required>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="inputPassword4">ID TYPE</label>
+                                                <select class="custom-select" required>
+                                                <option value="">Open this select menu</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                              </select>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="inputPassword4">LOGIN USER NAME</label>
+                                                <input type="text" class="form-control" id="" placeholder="LOGIN USER NAME">
+                                            </div>
+                                        </div>
+                                        <div class="container row">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustom01">LOGIN PASSWORD</label>
+                                                <input type="password" class="form-control" id="" placeholder="PASSWORD" required>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="inputPassword4">REGISTERED EMAIL ID</label>
+                                                <input type="email" class="form-control" id="" placeholder="EMAIL ID">
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="inputPassword4">PAN No.</label>
+                                                <input type="text" class="form-control" id="inputPassword4" placeholder="ICEGATE ID">
+                                            </div>
+                                        </div>
+                                        <div class="container row">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="inputPassword4">USER ID</label>
+                                                <select class="custom-select" required>
+                                                <option value="">Select user id</option>
+                                                <option value="1">Sunnykosle</option>
+                                                <option value="2">Jack</option>
+                                                <option value="3">peers</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="container txt-center">
+                                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                                                        Send
+                                                      </button>
+                                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#model_2">Read</button>
+                                                    <button type="button" class="btn btn-link">send test email</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-md-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-title">Advanced Table</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. All rights reserved.</span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+
+    <!-- plugins:js -->
+    <script src="js/vendor.bundle.base.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap4.js"></script>
+    <script src="js/dataTables.select.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/Chart.roundedBarCharts.js"></script>
+
+
+
+    <!-- adding model for send -->
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Email send configuration</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="mb-2">
+                            <label for="inputPassword4">Use this SMPT Server : </label>
+                            <input type="checkbox" id="">
+                        </div>
+
+                        <div class="mt-2">
+                            <label for="inputPassword4">Server</label>
+                            <input type="text" class="form-control" id="h_txt" placeholder="Server name">
+                        </div>
+                        <div class="mt-2">
+                            <label for="inputPassword4">Use SSL :</label>
+                            <input type="checkbox" id="">
+                        </div>
+                        <div class="mt-2">
+                            <label for="inputPassword4">Login Id</label>
+                            <input type="text" class="form-control" id="h_txt" placeholder=" Enetr login id">
+                        </div>
+
+                        <div class="mt-2">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="h_txt" placeholder="Enter password">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container txt-center">
+                        <button type="button" class="btn btn-info btn-sm">Save changes</button>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- adding model for send end -->
+
+
+
+    <!-- adding model for read -->
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="model_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabe2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Email Read Configuration</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="mt-2">
+                            <label for="inputPassword4">Check status every : </label>
+                            <input type="text" id="txt1"><span> minutes(0-disable auto run)</span>
+                        </div>
+                        <!-- <label for="inputPassword4">Type</label> -->
+
+                        <div>
+                            <select class="custom-select" required>
+                            <option value="">Select Type</option>
+                            <option value="1">IMAP</option>
+                            <option value="2">IMAP</option>
+                            <option value="3">IMAP</option>
+                          </select>
+                        </div>
+                        <div class="mt-2">
+                            <label for="inputPassword4">Server : </label>
+                            <input type="text" class="form-control" id="h_txt" placeholder=" Enetr login id">
+                        </div>
+                        <div class="mt-2">
+                            <label for="inputPassword4">Use SSL :</label>
+                            <input type="checkbox" id=""><span> Ignore SSL Erros  <input type="checkbox" id=""></span>
+                        </div>
+                        <div class="">
+                            <label for="inputPassword4">Login id</label>
+                            <input type="text" class="form-control" id="h_txt" placeholder=" Enetr login id">
+                        </div>
+                        <div class="mt-2">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="h_txt" placeholder="Enter password">
+                        </div>
+                        <div class="mt-2">
+                            <label for="inputPassword4">Mail folder</label>
+                            <input type="password" class="form-control" id="h_txt" placeholder="folder name">
+                        </div>
+                        <div class="mt-2">
+                            <label for="inputPassword4">Last mail read on</label>
+                            <input type="date" class="form-control" id="h_txt">
+                        </div>
+                        <div class="mt-2">
+                            <label for="inputPassword4">Additional mail sender</label>
+                            <input type="password" class="form-control" id="h_txt" placeholder="email">
+                            <span>separate each e-mail id by (,)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container txt-center">
+                        <button type="button" class="btn btn-success btn-sm">Save</button>
+                        <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Save & Close</button>
+                        <button type="button" class="btn btn-info btn-sm">Save & New </button>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- adding model for read end -->
+</body>
+
+</html>
